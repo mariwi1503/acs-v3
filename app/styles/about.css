@@ -1,0 +1,109 @@
+@layer components {
+  .about {
+    border: 0;
+    background: linear-gradient(180deg, #060b1666, #060b16a6);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 96px;
+  }
+
+  .about .eyebrow {
+    margin-bottom: 20px;
+  }
+
+  .about h2 {
+    max-width: 480px;
+  }
+
+  .about-copy > p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .about-copy > p + p {
+    margin-top: 18px;
+  }
+
+  .vision-mission {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 64px;
+  }
+
+  .vision,
+  .mission {
+    border: 1px solid var(--line);
+    background: linear-gradient(155deg, var(--surface-2), var(--surface));
+    border-radius: var(--radius);
+    padding: 32px;
+  }
+
+  .vision {
+    border-color: var(--line-strong);
+  }
+
+  .vision-mission h3 {
+    margin-bottom: 18px;
+  }
+
+  .vision p {
+    font-size: clamp(20px, 2vw, 24px);
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+
+  .mission ol {
+    display: grid;
+    gap: 14px;
+  }
+
+  .mission li {
+    display: flex;
+    gap: 14px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  .mission-no {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.9;
+    color: var(--sky);
+  }
+
+  @media (max-width: 1100px) {
+    .about-grid {
+      gap: 56px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .vision-mission {
+      grid-template-columns: 1fr;
+      margin-top: 48px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .about-copy > p {
+      font-size: 16px;
+    }
+
+    .vision,
+    .mission {
+      padding: 24px 20px;
+    }
+  }
+}

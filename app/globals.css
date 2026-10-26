@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* Style per section. Setiap file membungkus aturannya di @layer base/components
+   sehingga utility Tailwind tetap bisa menimpanya bila diperlukan. */
+@import "./styles/base.css";
+@import "./styles/header.css";
+@import "./styles/hero.css";
+@import "./styles/about.css";
+@import "./styles/services.css";
+@import "./styles/managed.css";
+@import "./styles/industry.css";
+@import "./styles/clients.css";
+@import "./styles/faq.css";
+@import "./styles/contact.css";
+@import "./styles/footer.css";
+@import "./styles/motion.css";
+
+/*
+ * Token desain. Didefinisikan di :root agar bisa dipakai langsung di CSS
+ * komponen, lalu diekspos ke Tailwind lewat @theme inline sehingga utility
+ * seperti `text-cyan` atau `bg-surface` juga tersedia.
+ *
+ * Palet mengikuti logo & ilustrasi brand: navy sebagai dasar, biru/cyan
+ * sebagai aksen teknologi, dan oranye khusus untuk aksi (CTA).
+ * Semua warna teks lolos kontras WCAG AA (≥ 4.5:1) di atas --bg dan --surface.
+ */
+:root {
+  --bg: #060b16;
+  --bg-alt: #08101d;
+  --surface: #0d1626;
+  --surface-2: #111d31;
+  --line: rgba(151, 177, 222, 0.14);
+  --line-strong: rgba(110, 160, 235, 0.38);
+  --text: #eef4ff;
+  --muted: #a9b6cb;
+  --subtle: #8a9bb6;
+  --blue: #4c8dff;
+  --sky: #8abbff;
+  --cyan: #66deff;
+  --orange: #ff7a29;
+  --orange-hover: #ff9150;
+  --on-orange: #0a0f1a;
+  --tile: #eef4ff;
+  --whatsapp: #25d366;
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-blue: var(--blue);
+  --color-cyan: var(--cyan);
+  --color-orange: var(--orange);
+  --font-sans: var(--font-jakarta), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}

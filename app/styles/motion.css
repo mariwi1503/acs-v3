@@ -1,0 +1,141 @@
+/* Efek dekoratif: jaring latar, kursor, tombol jeda, dan animasi reveal.
+   Kelas `js-motion` dan `is-paused` dipasang di <body> oleh MotionProvider. */
+@layer components {
+  .bg-net {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.9;
+  }
+
+  /* Kontrol jeda animasi (WCAG 2.2.2) di kiri bawah. */
+  .motion-control {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 35;
+    min-height: 44px;
+    background: #0d1a2deb;
+    border: 1px solid #688bc64d;
+    box-shadow: 0 3px 20px #0004;
+    border-radius: 999px;
+    color: #c3d4ec;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(12px);
+  }
+
+  .motion-control svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .cursor-glow {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(circle, #2682ff24, transparent 70%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0;
+  }
+
+  .cursor-ring {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 23px;
+    height: 23px;
+    pointer-events: none;
+    border: 1.5px solid #7ac7ffb3;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 60;
+    opacity: 0;
+    transition:
+      width 0.2s,
+      height 0.2s;
+  }
+
+  .cursor-ring.hover {
+    width: 39px;
+    height: 39px;
+    border-color: #9edcff66;
+  }
+
+  .js-motion .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.7s,
+      transform 0.7s;
+  }
+
+  .js-motion .reveal.seen {
+    opacity: 1;
+    transform: none;
+  }
+
+  .is-paused *,
+  .is-paused *::before,
+  .is-paused *::after {
+    animation-play-state: paused !important;
+  }
+
+  .is-paused .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .is-paused .cursor-ring,
+  .is-paused .cursor-glow {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    .motion-control {
+      width: 44px;
+      padding: 0;
+      justify-content: center;
+      bottom: 16px;
+      left: 16px;
+    }
+
+    .motion-label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    .cursor-ring,
+    .cursor-glow {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .js-motion .reveal {
+      opacity: 1;
+      transform: none;
+    }
+
+    .cursor-ring,
+    .cursor-glow {
+      display: none;
+    }
+  }
+}
