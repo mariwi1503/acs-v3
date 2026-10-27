@@ -88,23 +88,6 @@ const ICONS = {
       <circle cx="12" cy="10" r="3" />
     </>
   ),
-  instagram: (
-    <>
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <path d="M17.5 6.5h.01" />
-    </>
-  ),
-  facebook: (
-    <path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V10H6.5v3.5H9V21h3.5v-7.5H15l.5-3.5h-3V7a1 1 0 0 1 1-1H15z" />
-  ),
-  tiktok: <path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.5 2.7 2.3 4.3 5 4.5" />,
-  linkedin: (
-    <>
-      <rect x="3" y="3" width="18" height="18" rx="3" />
-      <path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5a3 3 0 0 1 6 0V17" />
-    </>
-  ),
   menu: <path d="M4 6h16M4 12h16M4 18h16" />,
   pause: <path d="M9 5v14M15 5v14" />,
   play: <path d="m8 4 12 8-12 8z" />,

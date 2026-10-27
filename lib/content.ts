@@ -18,13 +18,11 @@ export const CONTACT = {
   region: "Jawa Barat",
 } as const;
 
-/** Isi `url` saat akun sudah tersedia; selama kosong ikon tampil tanpa tautan. */
-export const SOCIAL_LINKS: { label: string; icon: IconName; url: string }[] = [
-  { label: "Instagram", icon: "instagram", url: "" },
-  { label: "Facebook", icon: "facebook", url: "" },
-  { label: "TikTok", icon: "tiktok", url: "" },
-  { label: "LinkedIn", icon: "linkedin", url: "" },
-];
+export const SOCIAL_LINKS = [
+  { label: "Instagram", icon: "instagram", url: "https://www.instagram.com/alphacoresolution.it" },
+  { label: "Facebook", icon: "facebook", url: "https://www.facebook.com/profile.php?id=61596075774409" },
+  { label: "TikTok", icon: "tiktok", url: "https://www.tiktok.com/@alphacoresolution.it" },
+] as const;
 
 export const whatsappUrl = (text?: string) =>
   `https://wa.me/${CONTACT.whatsapp}${text ? `?text=${encodeURIComponent(text)}` : ""}`;
