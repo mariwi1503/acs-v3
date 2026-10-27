@@ -123,20 +123,10 @@
     margin-bottom: 4px;
   }
 
-  .contact-row a,
   .contact-row address {
     font-size: 17px;
     font-style: normal;
     line-height: 1.6;
-    transition: color 0.2s;
-  }
-
-  .contact-row a:hover {
-    color: var(--cyan);
-  }
-
-  .contact-row .social-links {
-    margin-top: 8px;
   }
 
   .form-panel {

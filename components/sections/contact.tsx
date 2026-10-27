@@ -1,5 +1,4 @@
 import { Icon } from "@/components/icon";
-import { SocialLinks } from "@/components/social-links";
 import { CONTACT, mailtoUrl, whatsappUrl } from "@/lib/content";
 import { InquiryForm } from "./inquiry-form";
 
@@ -64,13 +63,6 @@ export function Contact() {
                   <br />
                   {CONTACT.area}
                 </address>
-              </div>
-            </div>
-            <div className="contact-row">
-              <Icon name="globe" />
-              <div>
-                <small>Media sosial</small>
-                <SocialLinks />
               </div>
             </div>
           </div>
