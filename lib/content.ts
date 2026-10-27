@@ -3,7 +3,7 @@ import type { IconName } from "@/components/icon";
 export const SITE = {
   name: "Alpha Core Solution",
   legalName: "PT. Alpha Core Solution",
-  url: "https://www.alphacoresolution.com",
+  url: "https://www.alphacoresolution.id",
   tagline: "Your digital service partner",
 } as const;
 
