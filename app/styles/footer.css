@@ -42,7 +42,42 @@
   }
 
   .footer-col a:hover {
-    color: var(--text);
+    color: var(--orange);
+  }
+
+  .footer-contact a,
+  .footer-contact address {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .footer-contact .icon {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+  }
+
+  .footer .brand {
+    transition: color 0.2s;
+  }
+
+  .footer .brand .logo path,
+  .footer .brand-text span {
+    transition: fill 0.2s, color 0.2s;
+  }
+
+  .footer .brand:hover,
+  .footer .brand:hover .brand-text span {
+    color: var(--orange);
+  }
+
+  .footer .brand:hover .logo path {
+    fill: var(--orange);
+  }
+
+  .footer a.social-link:hover {
+    border-color: var(--orange);
   }
 
   .footer-bottom {

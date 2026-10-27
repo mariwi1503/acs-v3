@@ -1,5 +1,5 @@
 import { cacheLife } from "next/cache";
-import { Brand } from "@/components/icon";
+import { Brand, Icon } from "@/components/icon";
 import { SocialLinks } from "@/components/social-links";
 import { CONTACT, FOOTER_LINKS, MANAGED_SERVICE_TITLE, SERVICE_GROUPS, SITE, whatsappUrl } from "@/lib/content";
 
@@ -50,20 +50,25 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          <div className="footer-col">
+          <div className="footer-col footer-contact">
             <h2 className="label">Kontak</h2>
             <ul>
               <li>
                 <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
-                  {CONTACT.phoneDisplay}
+                  <Icon name="phone" />
+                  <span>{CONTACT.phoneDisplay}</span>
                 </a>
               </li>
               <li>
-                <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+                <a href={`mailto:${CONTACT.email}`}>
+                  <Icon name="mail" />
+                  <span>{CONTACT.email}</span>
+                </a>
               </li>
               <li>
                 <address>
-                  {CONTACT.street}, {CONTACT.area}
+                  <Icon name="pin" />
+                  <span>{CONTACT.street}, {CONTACT.area}</span>
                 </address>
               </li>
             </ul>
