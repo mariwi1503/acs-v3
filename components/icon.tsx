@@ -89,6 +89,14 @@ const ICONS = {
     </>
   ),
   menu: <path d="M4 6h16M4 12h16M4 18h16" />,
+  bot: (
+    <>
+      <rect x="3" y="7" width="18" height="14" rx="4" />
+      <path d="M12 3v4M9 3h6M3 13H1M23 13h-2M8 14h.01M16 14h.01M9 18h6" />
+    </>
+  ),
+  close: <path d="M5 5l14 14M19 5 5 19" />,
+  restart: <path d="M3 11a9 9 0 1 1 2.5 7M3 4v7h7" />,
   pause: <path d="M9 5v14M15 5v14" />,
   play: <path d="m8 4 12 8-12 8z" />,
 } satisfies Record<string, ReactNode>;

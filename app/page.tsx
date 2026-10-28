@@ -1,4 +1,5 @@
 import { BackgroundMesh } from "@/components/motion/background-mesh";
+import { ChatLauncher } from "@/components/chatbot/chat-launcher";
 import { MotionProvider } from "@/components/motion/motion-provider";
 import { MotionToggle } from "@/components/motion/motion-toggle";
 import { About } from "@/components/sections/about";
@@ -41,6 +42,7 @@ export default function Home() {
       </div>
 
       <MotionToggle />
+      <ChatLauncher />
     </MotionProvider>
   );
 }

@@ -47,6 +47,10 @@
     gap: 20px;
   }
 
+  .cards[hidden] {
+    display: none;
+  }
+
   .service-card {
     --mx: 50%;
     --my: 40%;

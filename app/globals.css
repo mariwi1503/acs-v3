@@ -14,6 +14,7 @@
 @import "./styles/contact.css";
 @import "./styles/footer.css";
 @import "./styles/motion.css";
+@import "./styles/chatbot.css";
 
 /*
  * Token desain. Didefinisikan di :root agar bisa dipakai langsung di CSS
